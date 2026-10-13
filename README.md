@@ -12,13 +12,3 @@ Plataforma web para consulta y difusión comunitaria de la guía táctica **M@n�
 - `.nojekyll`: Garantiza la entrega directa de todos los recursos en GitHub Pages.
 
 ---
-
-## Despliegue en GitHub Pages
-
-1. En tu repositorio en GitHub, ve a **Settings** > **Pages**.
-2. En **Build and deployment** > **Source**, selecciona `Deploy from a branch`.
-3. Selecciona la rama `main` y la carpeta `/(root)`.
-4. Haz clic en **Save**.
-
-El sitio estará disponible en:
-`https://TU-USUARIO.github.io/manual-parche/`

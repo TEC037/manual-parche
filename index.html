@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M@nü4I D3l P4rch3</title>
-  <meta name="description" content="Manual Táctico del Parche - Guía visual de autocuidado y defensa colectiva">
+  <meta name="description" content="Manual Táctico del Parche - Guía de autocuidado y defensa colectiva">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
       --font-mono: 'JetBrains Mono', monospace;
       --radius: 10px;
 
-      /* Pacto Histórico Palette: Morado, Fucsia, Rojo, Amarillo */
+      /* Paleta institucional Pacto Histórico */
       --ph-purple: #7b1fa2;
       --ph-fuchsia: #d81b60;
       --ph-red: #e53935;
@@ -44,58 +44,77 @@
       display: flex;
       flex-direction: column;
       overflow-x: hidden;
+      padding: 1.5rem;
     }
 
-    /* Header Navigation */
-    header {
-      background-color: rgba(18, 23, 32, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      padding: 0.75rem 1.5rem;
+    @media (max-width: 600px) {
+      body {
+        padding: 0.75rem;
+      }
     }
 
-    .nav-container {
-      max-width: 1400px;
+    /* Main Container */
+    main {
+      max-width: 1300px;
+      width: 100%;
       margin: 0 auto;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1.25rem;
+      flex: 1;
     }
 
-    .brand {
+    /* Hero / Header Card */
+    .hero-card {
+      background: linear-gradient(180deg, var(--bg-card) 0%, rgba(18, 23, 32, 0.75) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.75rem;
+      flex-wrap: wrap;
+      gap: 1.25rem;
     }
 
-    .brand-tag {
+    .hero-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .hero-tag {
       font-family: var(--font-mono);
       font-size: 0.75rem;
       font-weight: 600;
-      background: rgba(255, 209, 0, 0.12);
+      background: rgba(255, 209, 0, 0.1);
       color: var(--accent);
-      border: 1px solid rgba(255, 209, 0, 0.3);
-      padding: 0.2rem 0.5rem;
+      border: 1px solid rgba(255, 209, 0, 0.25);
+      padding: 0.2rem 0.55rem;
       border-radius: 4px;
+      width: fit-content;
       letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
     }
 
-    .brand-title {
-      font-size: 1.25rem;
+    .hero-details h1 {
+      font-size: 1.65rem;
       font-weight: 700;
       letter-spacing: -0.5px;
       color: var(--text-main);
     }
 
-    .nav-actions {
+    .hero-details p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 680px;
+      line-height: 1.45;
+    }
+
+    .hero-actions {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.85rem;
       flex-wrap: wrap;
     }
 
@@ -103,8 +122,8 @@
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.55rem 1.1rem;
+      gap: 0.55rem;
+      padding: 0.65rem 1.15rem;
       border-radius: var(--radius);
       font-size: 0.9rem;
       font-weight: 600;
@@ -113,6 +132,7 @@
       transition: all 0.25s ease;
       border: 1px solid transparent;
       font-family: var(--font-main);
+      line-height: 1;
     }
 
     .btn-secondary {
@@ -140,7 +160,7 @@
       transform: translateY(-1px);
     }
 
-    /* Botón Pacto Histórico con gradiente oficial multicolor */
+    /* Botón Pacto Histórico */
     .btn-pacto {
       background: linear-gradient(135deg, #7b1fa2 0%, #d81b60 38%, #e53935 70%, #fbc02d 100%);
       color: #ffffff;
@@ -155,62 +175,6 @@
       box-shadow: 0 5px 20px rgba(216, 27, 96, 0.6), 0 2px 10px rgba(123, 31, 162, 0.4);
       transform: translateY(-2px);
       color: #ffffff;
-    }
-
-    /* Main Container */
-    main {
-      flex: 1;
-      max-width: 1400px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    /* Hero / Info Card */
-    .info-card {
-      background: linear-gradient(180deg, var(--bg-card) 0%, rgba(18, 23, 32, 0.6) 100%);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .info-content h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .info-content p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 750px;
-      line-height: 1.45;
-    }
-
-    .info-meta {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--text-dim);
-    }
-
-    .info-meta span {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
     }
 
     /* Viewer Container */
@@ -229,7 +193,7 @@
     .viewer-toolbar {
       background-color: var(--bg-surface);
       border-bottom: 1px solid var(--border);
-      padding: 0.6rem 1rem;
+      padding: 0.65rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -266,7 +230,7 @@
       background-color: #2b2b2b;
     }
 
-    /* Mobile Fallback Card */
+    /* Mobile Fallback */
     .mobile-fallback {
       display: none;
       padding: 2rem 1.5rem;
@@ -284,13 +248,13 @@
       }
     }
 
-    /* Sticky Bottom Banner Pacto Histórico */
+    /* Banner Enlace Pacto Histórico */
     .banner-cta {
       background: linear-gradient(90deg, #131b26 0%, #192334 100%);
       border: 1px solid rgba(216, 27, 96, 0.35);
       border-left: 5px solid #d81b60;
       border-radius: var(--radius);
-      padding: 1.15rem 1.5rem;
+      padding: 1.25rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -302,33 +266,21 @@
 
     .banner-text {
       display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .banner-icon {
-      font-size: 1.85rem;
-      background: rgba(216, 27, 96, 0.12);
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      border: 1px solid rgba(216, 27, 96, 0.3);
+      flex-direction: column;
+      gap: 0.25rem;
     }
 
     .banner-text h3 {
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 0.25rem;
     }
 
     .banner-text p {
       font-size: 0.88rem;
       color: var(--text-muted);
       line-height: 1.4;
+      max-width: 700px;
     }
 
     /* Modal for Download & Redirect */
@@ -356,7 +308,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      max-width: 500px;
+      max-width: 480px;
       width: 100%;
       padding: 2.2rem;
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
@@ -374,14 +326,21 @@
       margin-bottom: 1.25rem;
     }
 
-    .modal-icon {
-      font-size: 2.6rem;
-      margin-bottom: 0.75rem;
+    .modal-badge {
       display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #10b981;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
     }
 
     .modal-header h2 {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: var(--text-main);
       margin-bottom: 0.4rem;
@@ -401,7 +360,7 @@
       margin: 1.25rem 0;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.65rem;
     }
 
     .redirect-url {
@@ -450,7 +409,7 @@
       background: none;
       border: none;
       color: var(--text-dim);
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       cursor: pointer;
       line-height: 1;
     }
@@ -462,24 +421,29 @@
     /* Footer */
     footer {
       border-top: 1px solid var(--border);
-      padding: 1.25rem;
+      padding: 1.5rem 0 0.5rem 0;
       text-align: center;
       color: var(--text-dim);
       font-size: 0.85rem;
-      margin-top: auto;
+      margin-top: 1.5rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <div class="brand">
-        <span class="brand-tag">GUÍA TÁCTICA</span>
-        <span class="brand-title">M@nü4I D3l P4rch3</span>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero / Top Section -->
+    <section class="hero-card">
+      <div class="hero-details">
+        <span class="hero-tag">GUÍA TÁCTICA</span>
+        <h1>M@nü4I D3l P4rch3</h1>
+        <p>
+          Guía de autocuidado, comunicación segura y defensa colectiva. 
+          Documento abierto para lectura en línea y descarga libre.
+        </p>
       </div>
-      <div class="nav-actions">
+      <div class="hero-actions">
         <!-- Direct Download Button -->
         <a href="M@nü4I D3l P4rch3.pdf" download="M@nü4I D3l P4rch3.pdf" id="btn-download-top" class="btn btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -488,32 +452,8 @@
         <!-- Pacto Histórico Membership Button -->
         <a href="https://michi.movimientopactohistorico.co/registro/membresias" target="_blank" rel="noopener noreferrer" class="btn btn-pacto">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Membresías Pacto Histórico ➔
+          Membresías Pacto Histórico
         </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Info Hero -->
-    <section class="info-card">
-      <div class="info-content">
-        <h1>
-          <span>🛡️</span>
-          <span>M@nü4I D3l P4rch3</span>
-        </h1>
-        <p>
-          Guía visual y táctica de autocuidado, comunicación segura y defensa colectiva. 
-          Documento abierto para consulta directa en línea y descarga libre.
-        </p>
-      </div>
-      <div class="info-meta">
-        <span>📄 5 Páginas</span>
-        <span>•</span>
-        <span>🛡️ Guía Oficial</span>
-        <span>•</span>
-        <span>⚡ Descarga Gratuita</span>
       </div>
     </section>
 
@@ -522,16 +462,16 @@
       <div class="viewer-toolbar">
         <div class="viewer-status">
           <span class="pulse-dot"></span>
-          <span>Visor de Documento Activo</span>
+          <span>Visor Activo</span>
         </div>
         <div>
-          <a href="M@nü4I D3l P4rch3.pdf" target="_blank" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
-            Ver en Pestaña Nueva ↗
+          <a href="M%40n%C3%BC4I%20D3l%20P4rch3.pdf" target="_blank" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+            Abrir en Pestaña Nueva
           </a>
         </div>
       </div>
 
-      <!-- Iframe to render PDF -->
+      <!-- Iframe to render PDF directly -->
       <iframe 
         class="pdf-frame" 
         src="M%40n%C3%BC4I%20D3l%20P4rch3.pdf#toolbar=1&navpanes=0&view=FitH" 
@@ -542,30 +482,27 @@
       <!-- Mobile fallback block -->
       <div class="mobile-fallback">
         <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">
-          ¿Problemas para previsualizar en tu dispositivo móvil? Puedes abrirlo directamente o descargarlo:
+          Si tu dispositivo móvil no previsualiza el PDF, puedes abrirlo directamente o descargarlo:
         </p>
         <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
           <a href="M%40n%C3%BC4I%20D3l%20P4rch3.pdf" target="_blank" class="btn btn-secondary">
-            Abrir PDF Directo
+            Abrir PDF
           </a>
           <a href="M@nü4I D3l P4rch3.pdf" download="M@nü4I D3l P4rch3.pdf" class="btn btn-primary btn-trigger-download">
-            Descargar Archivo
+            Descargar PDF
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Bottom Sticky CTA Banner Pacto Histórico -->
+    <!-- Bottom Action Banner for Registration -->
     <section class="banner-cta">
       <div class="banner-text">
-        <div class="banner-icon">✊</div>
-        <div>
-          <h3>Súmate al Movimiento Político Pacto Histórico (PH)</h3>
-          <p>Organízate y haz parte activa del cambio popular. Realiza tu registro oficial de membresía en la plataforma Michi.</p>
-        </div>
+        <h3>Registro de Membresías - Movimiento Pacto Histórico</h3>
+        <p>Para vincularte u organizarte formalmente, accede a la plataforma oficial de membresías en Michi.</p>
       </div>
       <a href="https://michi.movimientopactohistorico.co/registro/membresias" target="_blank" rel="noopener noreferrer" class="btn btn-pacto">
-        Registrarse en Pacto Histórico ➔
+        Ir al Registro Oficial
       </a>
     </section>
   </main>
@@ -576,23 +513,23 @@
       <button class="modal-close-btn" id="modal-close" title="Cerrar modal">&times;</button>
       
       <div class="modal-header">
-        <div class="modal-icon">✅</div>
-        <h2>¡Descarga Iniciada!</h2>
-        <p>Tu copia de <strong>M@nü4I D3l P4rch3.pdf</strong> se está descargando en tu dispositivo.</p>
+        <span class="modal-badge">DESCARGA INICIADA</span>
+        <h2>Descarga en Curso</h2>
+        <p>El archivo <strong>M@nü4I D3l P4rch3.pdf</strong> se está descargando en tu dispositivo.</p>
       </div>
 
       <div class="redirect-card">
-        <div style="font-size: 0.9rem; font-weight: 700; color: #ffd100;">
-          Siguiente paso organizativo:
+        <div style="font-size: 0.88rem; font-weight: 600; color: var(--text-main);">
+          Enlace al Movimiento Político Pacto Histórico:
         </div>
-        <div style="font-size: 0.88rem; color: var(--text-main); line-height: 1.45;">
-          Conéctate y regístrate como miembro oficial del <strong>Movimiento Pacto Histórico</strong>:
+        <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.45;">
+          Puedes formalizar tu vinculación en la plataforma oficial de membresías:
         </div>
         <div class="redirect-url">
           https://michi.movimientopactohistorico.co/registro/membresias
         </div>
         <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">
-          <span>Redirección a plataforma oficial</span>
+          <span>Redirección sugerida</span>
           <span id="countdown-text">en 7 segundos...</span>
         </div>
         <div class="progress-bar-container">
@@ -602,10 +539,10 @@
 
       <div class="modal-actions">
         <a href="https://michi.movimientopactohistorico.co/registro/membresias" id="btn-redirect-now" class="btn btn-pacto btn-full">
-          Ir a Registro Pacto Histórico ➔
+          Ir al Registro de Membresías
         </a>
         <button id="btn-stay-here" class="btn btn-secondary btn-full">
-          Quedarme leyendo en este sitio
+          Quedarme en este visor
         </button>
       </div>
     </div>
@@ -613,7 +550,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>M@nü4I D3l P4rch3 // Autocuidado y Defensa Colectiva • Movimiento Político Pacto Histórico (PH)</p>
+    <p>M@nü4I D3l P4rch3 // Autocuidado y Defensa Colectiva</p>
   </footer>
 
   <!-- Scripts -->

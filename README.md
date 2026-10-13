@@ -4,7 +4,7 @@ Plataforma web para consulta y difusión comunitaria de la guía táctica **M@n�
 
 ---
 
-## 📁 Contenido del Repositorio
+## Contenido del Repositorio
 
 - `index.html`: Interfaz web con visor PDF integrado, diseño responsivo, botones de descarga y redirección al registro del Pacto Histórico.
 - `M@nü4I D3l P4rch3.pdf`: Archivo del manual listo para visualización y descarga.
@@ -13,7 +13,7 @@ Plataforma web para consulta y difusión comunitaria de la guía táctica **M@n�
 
 ---
 
-## 🚀 Despliegue en GitHub Pages
+## Despliegue en GitHub Pages
 
 1. En tu repositorio en GitHub, ve a **Settings** > **Pages**.
 2. En **Build and deployment** > **Source**, selecciona `Deploy from a branch`.
